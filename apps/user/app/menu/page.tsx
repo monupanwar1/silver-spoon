@@ -114,7 +114,7 @@ export default function Page() {
 
       {/* Tabs for Categories */}
       <section className="container mx-auto px-4 min-h-screen  ">
-        <Tabs className='flex items-center justify-center'>
+        <Tabs className='flex items-center justify-center flex-col'>
           <TabsList className="flex justify-center mb-8 flex-wrap gap-2">
             {menuItems.map((section, index) => (
               <TabsTrigger key={index} value={section.category}>
