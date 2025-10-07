@@ -4,17 +4,17 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <section className="bg-[#FFF9EA] container px-4 mx-auto flex flex-col items-center justify-center text-center border-t">
+    <section className=" container px-4 mx-auto flex flex-col items-center justify-center text-center border-t">
       <div className="grid grid-cols-1 md:grid-cols-4 px-4 py-10 w-full gap-4">
         <div className="flex items-center justify-center gap-4 flex-col">
           <h1 className="flex items-center text-2xl md:text-3xl font-bold">
-            SilverSpon{' '}
+            SilverSpon{" "}
             <span>
               <CiForkAndKnife className="text-orange-500 font-bold text-2xl" />
             </span>
           </h1>
-          <p className=" font-semibold text-neutral-950/50">
-            Jalan Semangka Raya, Telaga Murni{' '}
+          <p className=" font-semibold text-neutral-950/70">
+            Jalan Semangka Raya, Telaga Murni{" "}
           </p>
           <p className="text-2xl flex gap-3 mb-2">
             <FaInstagram />
@@ -29,7 +29,7 @@ const Footer = () => {
           <Link href="/about" className="font-semibold text-neutral-950/50 ">
             About us
           </Link>
-          <Link href="/career" className=" font-semibold text-neutral-950/50 ">
+          <Link href="/career" className=" font-semibold text-neutral-950/70 ">
             Career
           </Link>
           <Link
