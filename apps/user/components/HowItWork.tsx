@@ -101,7 +101,7 @@ export default function HowItWork() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.15 }}
         transition={{ delay: 0.8 }}
-        className="absolute bottom-2 right-2 text-[10rem] md:text-[14rem] font-extrabold text-[#2D1E2F] select-none"
+        className="absolute bottom-2 right-2 text-[8rem] md:text-[14rem] font-extrabold text-[#2D1E2F] select-none"
       >
         FOOD
       </motion.div>
