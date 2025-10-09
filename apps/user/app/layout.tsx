@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import Header from "~/components/Header";
-import { Inter } from "next/font/google"; 
 import "@repo/ui/globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,16 +13,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased bg-gradient-to-b from-[#FFF5E1] to-[#FFD8B1]`}
+        className={`${inter.className} antialiased  bg-gradient-to-b from-[#FFF5E1] to-[#FFD8B1]  w-full min-h-screen `}
       >
         <Header />
+
         {children}
+
+        {/* <Footer /> */}
       </body>
     </html>
   );

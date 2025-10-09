@@ -65,7 +65,7 @@ export default function HowItWork() {
       </motion.p>
 
       {/* service cards */}
-      <div className="grid md:grid-cols-3 gap-10 mt-16 z-10">
+      <div className="grid md:grid-cols-3 gap-10 mt-16 ">
         {services.map((service, index) => (
           <motion.div
             key={service.heading}

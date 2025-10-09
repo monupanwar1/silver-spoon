@@ -7,11 +7,12 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="relative mt-2 bg-[#FFD8B1] border-t border-[#2D1E2F] text-[#2D1E2F] overflow-hidden">
+    <footer className="relative w-full mt-2  border-t border-[#2D1E2F] text-[#2D1E2F] overflow-hidden">
       {/* Retro background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,180,100,0.25)_0%,transparent_80%)] pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,180,100,0.25)_0%,transparent_80%)] pointer-events-none" /> */}
 
-      <div className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left relative z-10">
+      {/* ✅ fixed width issue: removed 'container' */}
+      <div className="w-full max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center md:text-left relative z-10">
         {/* Brand section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,23 +46,14 @@ const Footer = () => {
           <h1 className="font-bold text-2xl mb-2 drop-shadow-[2px_2px_0px_#FFB26B]">
             Company
           </h1>
-          <Link
-            href="/about"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/about" className="footer-link">
             About us
           </Link>
-          <Link
-            href="/career"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/career" className="footer-link">
             Career
           </Link>
-          <Link
-            href="#how-it-works"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
-            How it Work
+          <Link href="#how-it-works" className="footer-link">
+            How it Works
           </Link>
         </motion.div>
 
@@ -75,22 +67,13 @@ const Footer = () => {
           <h1 className="font-bold text-2xl mb-2 drop-shadow-[2px_2px_0px_#FFB26B]">
             Policy
           </h1>
-          <Link
-            href="/faq"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/faq" className="footer-link">
             FAQ
           </Link>
-          <Link
-            href="/privacy"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/privacy" className="footer-link">
             Privacy
           </Link>
-          <Link
-            href="/shipping"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/shipping" className="footer-link">
             Shipping
           </Link>
         </motion.div>
@@ -105,10 +88,7 @@ const Footer = () => {
           <h1 className="font-bold text-2xl mb-2 drop-shadow-[2px_2px_0px_#FFB26B]">
             Get In Touch
           </h1>
-          <Link
-            href="/#"
-            className="font-semibold text-[#4B2E05]/70 hover:text-[#FF6B35] transition-colors"
-          >
+          <Link href="/#" className="footer-link">
             +91 123456789
           </Link>
           <p className="font-semibold text-[#4B2E05]/70 mt-1">
@@ -132,7 +112,7 @@ const Footer = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-5 right-8 text-[6rem] md:text-[10rem] font-extrabold text-[#2D1E2F] select-none"
+        className="absolute bottom-2 right-2 text-[8rem] md:text-[14rem] font-extrabold text-[#2D1E2F] select-none"
       >
         EATS
       </motion.div>

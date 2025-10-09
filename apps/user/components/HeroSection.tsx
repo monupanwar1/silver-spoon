@@ -1,16 +1,13 @@
 "use client";
 
 import { Button } from "@repo/ui/components/ui/button";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <main className="relative flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-16 py-20 overflow-hidden bg-gradient-to-b from-[#FFF5E1] to-[#FFD8B1]">
-      {/* Retro radial background */}
+    <section className="relative py-20 container px-4 min-h-screen w-full flex-col md:flex-row  items-center justify-center flex ">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,196,122,0.25)_0%,transparent_70%)] pointer-events-none" />
-
-      {/* LEFT TEXT SECTION */}
       <motion.section
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -39,8 +36,7 @@ export default function HeroSection() {
           </Button>
         </div>
       </motion.section>
-
-      {/* RIGHT IMAGE SECTION */}
+      {/* right section */}
       <motion.section
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -61,7 +57,7 @@ export default function HeroSection() {
         </div>
       </motion.section>
 
-      {/* DECORATIVE RETRO TEXT */}
+      {/* text */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 0.15, scale: 1 }}
@@ -70,6 +66,6 @@ export default function HeroSection() {
       >
         90’s
       </motion.div>
-    </main>
+    </section>
   );
 }

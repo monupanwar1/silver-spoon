@@ -112,7 +112,7 @@ export default function MenuSection() {
       >
         MENU
       </motion.div>
-      <Button className=" mt-10 bg-[#FF6B35] hover:bg-[#e85b29] text-white text-lg px-8 py-4 rounded-xl shadow-[6px_6px_0px_#2D1E2F] hover:shadow-[3px_3px_0px_#2D1E2F] transition-all duration-300">
+      <Button className=" mt-20 bg-[#FF6B35] hover:bg-[#e85b29] text-white text-lg px-8 py-4 rounded-xl shadow-[6px_6px_0px_#2D1E2F] hover:shadow-[3px_3px_0px_#2D1E2F] transition-all duration-300">
         More Menu 🍔
       </Button>
     </section>
