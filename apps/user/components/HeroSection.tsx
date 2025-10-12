@@ -52,7 +52,7 @@ export default function HeroSection() {
             width={650}
             height={450}
             priority
-            className="relative rounded-2xl border-4 border-[#2D1E2F] shadow-[10px_10px_0px_#2D1E2F] object-cover h-[400px]"
+            className="relative rounded-2xl hover:scale-105 transition-transform duration-300  shadow-[10px_10px_0px_#2D1E2F] object-cover h-[400px]"
           />
         </div>
       </motion.section>

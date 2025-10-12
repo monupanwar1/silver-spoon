@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@repo/ui/components/ui/button";
 import {
   Card,
@@ -7,8 +7,9 @@ import {
   CardTitle,
 } from "@repo/ui/components/ui/card";
 import { motion } from "framer-motion";
-import { HeartIcon } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 type Dish = {
   name: string;
@@ -42,6 +43,12 @@ const dishes: Dish[] = [
 ];
 
 export default function MenuSection() {
+  const [likes, setLikes] = useState(Array(dishes.length).fill(false));
+  const toggle = (index:number) => {
+    setLikes((prevLikes) =>
+      prevLikes.map((liked, i) => (i === index ? !liked : liked)),
+    );
+  };
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen text-center">
       <motion.h4
@@ -78,7 +85,7 @@ export default function MenuSection() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="relative h-90 w-80 bg-[#FFF0DA] border-2 border-[#2D1E2F] rounded-2xl shadow-[6px_6px_0px_#2D1E2F] flex flex-col items-center justify-center text-center px-4 py-6 hover:scale-105 transition-transform duration-300">
+            <Card className="relative h-90 w-80 bg-[#fff0da82] border-2 border-[#2D1E2F] rounded-2xl shadow-[6px_6px_0px_#2D1E2F] flex flex-col items-center justify-center text-center px-4 py-6 hover:scale-105 transition-transform duration-300 z-30">
               <div className="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#FFB26B]/40 blur-2xl rounded-full agp-4" />
 
               <Image
@@ -86,7 +93,7 @@ export default function MenuSection() {
                 alt={dish.name}
                 height={600}
                 width={1200}
-                className="rounded-2xl  relative z-10 mb-4 object-cover h-full "
+                className="rounded-2xl  relative  mb-4 object-cover h-full "
               />
 
               <div className="p-4 flex flex-col items-center text-center gap-2">
@@ -95,10 +102,12 @@ export default function MenuSection() {
                   {dish.description}
                 </CardDescription>
               </div>
-              <div className="w-full h-1 border-b"></div>
+              <div className="w-full h-[2px] border-b bg-neutral-950 "></div>
               <CardFooter className="flex justify-between py-4">
                 <p>{dish.price}</p>
-                <HeartIcon />
+                <button onClick={()=>toggle(index)}>
+                  {likes[index] ? <AiFillHeart className="text-red-500" /> : <AiOutlineHeart />}
+                </button>
               </CardFooter>
             </Card>
           </motion.div>

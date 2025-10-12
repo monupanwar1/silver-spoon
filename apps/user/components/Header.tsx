@@ -1,13 +1,13 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@repo/ui/components/ui/button";
+import { cn } from "@repo/ui/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { CiForkAndKnife, CiLogin } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
-import { useState } from "react";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-import { cn } from "@repo/ui/lib/utils";
-import { Button } from "@repo/ui/components/ui/button";
 
 const routes = [
   { name: "Home", path: "/" },
@@ -66,11 +66,9 @@ export default function Header() {
         </div>
 
         {/* Login */}
-        <Button className="bg-orange-500 text-black hidden md:flex">
-          <span>
-            <CiLogin />
-          </span>
-          Login
+        <Button className="hidden md:flex items-center px-6 py-2 bg-[#FF6B35] hover:bg-[#e85b29] text-white text-md rounded-md shadow-[2px_2px_0px_#2D1E2F] hover:shadow-[3px_3px_0px_#2D1E2F] transition-all duration-300">
+          <CiLogin className="mr-2" />
+          <span>Login</span>
         </Button>
 
         {/* Hamburger (mobile only) */}
@@ -108,9 +106,9 @@ export default function Header() {
               </Link>
             ))}
 
-            <Button className="bg-orange-500 text-black w-full">
+            <Button className="items-center px-6 py-2 bg-[#FF6B35] hover:bg-[#e85b29] text-white text-md rounded-md shadow-[2px_2px_0px_#2D1E2F] hover:shadow-[3px_3px_0px_#2D1E2F] transition-all duration-300">
               <CiLogin className="mr-2" />
-              Login
+              <span>Login</span>
             </Button>
           </motion.div>
         )}

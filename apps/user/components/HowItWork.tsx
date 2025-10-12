@@ -74,7 +74,8 @@ export default function HowItWork() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="relative h-80 w-72 bg-[#FFF0DA] border-2 border-[#2D1E2F] rounded-2xl shadow-[6px_6px_0px_#2D1E2F] flex flex-col items-center justify-center text-center px-4 py-6 hover:scale-105 transition-transform duration-300">
+            <Card className="relative h-80 w-72 bg-[#fff0da88] border-2 border-[#2D1E2F] rounded-2xl shadow-[6px_6px_0px_#2D1E2F] flex flex-col items-center justify-center text-center px-4 py-6 hover:scale-105 transition-transform duration-300 z-30 ">
+
               {/* retro highlight behind image */}
               <div className="absolute top-6 left-1/2 -translate-x-1/2 w-24 h-24 bg-[#FFB26B]/40 blur-2xl rounded-full" />
 
@@ -83,7 +84,7 @@ export default function HowItWork() {
                 height={80}
                 width={140}
                 alt={service.heading}
-                className="relative z-10 mb-4"
+                className="relative  mb-4"
               />
               <CardTitle className="text-2xl font-extrabold text-[#2D1E2F] tracking-wide drop-shadow-[2px_2px_0px_#FF9F68]">
                 {service.heading}
