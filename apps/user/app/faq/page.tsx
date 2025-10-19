@@ -1,3 +1,5 @@
+import H1 from "@repo/ui/components/ui/H1";
+
 export default function Page() {
   const faqs = [
     {
@@ -40,7 +42,7 @@ export default function Page() {
   return (
     <main className="min-h-screen py-20">
       <section className="container px-4 max-w-3xl mx-auto text-gray-800">
-        <h1 className="text-4xl font-bold mb-10">Frequently Asked Questions</h1>
+        <H1>Frequently Asked Questions</H1>
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (

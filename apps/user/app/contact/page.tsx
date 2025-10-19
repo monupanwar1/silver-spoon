@@ -1,4 +1,7 @@
+"use client"
 import { Button } from "@repo/ui/components/ui/button";
+import H1 from "@repo/ui/components/ui/H1";
+import P from "@repo/ui/components/ui/P";
 
 export default function Page() {
   return (
@@ -6,25 +9,25 @@ export default function Page() {
       <section className="container mx-auto px-4 min-h-screen">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-          <p  className="font-semibold text-neutral-900/70 max-w-2xl mx-auto">
-            Have questions, feedback, or just want to say hello? We apos;d love to
+          <H1>Contact Us</H1>
+          <P>
+            Have questions, feedback, or just want to say hello? We'd love to
             hear from you!
-          </p>
+          </P>
         </div>
 
         {/* Contact Info + Form */}
-        <div className="grid md:grid-cols-2 gap-10 px-4">
+        <div className="grid md:grid-cols-2 gap-10 px-4 items-center">
           {/* Contact Info */}
           <div className="space-y-6">
             <div>
               <h2 className="text-2xl font-semibold text-gray-800 mb-3">
                 Get in Touch
               </h2>
-              <p className="text-gray-600">
+              <P>
                 Reach out to us through the form or using the contact details
                 below.
-              </p>
+              </P>
             </div>
             <div className="space-y-4">
               <p>
@@ -35,14 +38,14 @@ export default function Page() {
                 📞 <span className="font-medium">Phone:</span> +91 98765 43210
               </p>
               <p>
-                📧 <span className="font-medium">Email:</span>{' '}
+                📧 <span className="font-medium">Email:</span>{" "}
                 contact@silverspoon.com
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="bg-white p-6 rounded-2xl shadow-md space-y-4">
+          <form className="p-6 rounded-2xl shadow-lg border-2 space-y-4">
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Name
@@ -68,15 +71,11 @@ export default function Page() {
                 Message
               </label>
               <textarea
-               
                 placeholder="Write your message..."
                 className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-200"
               ></textarea>
             </div>
-            <Button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-            >
+            <Button className="hidden md:flex w-full items-center px-6 py-2 bg-[#FF6B35] hover:bg-[#e85b29] text-white text-md rounded-md shadow-[2px_2px_0px_#2D1E2F] hover:shadow-[3px_3px_0px_#2D1E2F] transition-all duration-300">
               Send Message
             </Button>
           </form>

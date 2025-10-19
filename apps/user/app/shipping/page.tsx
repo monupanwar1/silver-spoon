@@ -1,14 +1,18 @@
+"use client"
+import H1 from "@repo/ui/components/ui/H1";
+import P from "@repo/ui/components/ui/P";
+
 export default function Page() {
   return (
     <main className="min-h-screen py-20">
       <section className="container px-4 max-w-3xl mx-auto text-gray-800">
-        <h1 className="text-4xl font-bold mb-8">Shipping Policy</h1>
+        <H1>Shipping Policy</H1>
 
-        <p className="mb-6">
+        <P>
           At <strong>SilverSpoon</strong>, we strive to deliver your orders
           quickly and efficiently. Please read our shipping policy below to
           understand how we process and deliver your purchases.
-        </p>
+        </P>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           1. Shipping Coverage

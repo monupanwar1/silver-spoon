@@ -1,15 +1,19 @@
+"use client"
+import H1 from "@repo/ui/components/ui/H1";
+import P from "@repo/ui/components/ui/P";
+
 export default function Page() {
   return (
     <main className="min-h-screen py-20">
       <section className="container px-4 max-w-3xl mx-auto text-gray-800">
-        <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+        <H1>Privacy Policy</H1>
 
-        <p className="mb-6">
+        <P>
           At <strong>SilverSpoon</strong>, we respect your privacy and are
           committed to protecting the personal information you share with us.
           This Privacy Policy explains how we collect, use, and safeguard your
           data when you use our website and services.
-        </p>
+        </P>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">
           1. Information We Collect
