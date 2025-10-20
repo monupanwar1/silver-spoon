@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "**.free-food-menus-api-two.vercel.app",
+      },
     ],
   },
 };
