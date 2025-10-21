@@ -7,12 +7,12 @@ import Offer from "~/components/Offer";
 
 export default function page() {
   return (
-      <main className="min-h-screen w-full">
-        <HeroSection />
-        <HowItWork />
-        <MenuSection />
-        <Offer />
-        <Footer />
-      </main>
+    <main className="min-h-screen w-full">
+      <HeroSection />
+      <HowItWork />
+      <MenuSection />
+      <Offer />
+      <Footer />
+    </main>
   );
 }

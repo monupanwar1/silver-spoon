@@ -9,19 +9,22 @@ import {
 } from "@repo/ui/components/ui/tabs";
 import { useMeals } from "@repo/ui/hooks/useMeal";
 import Image from "next/image";
+import Link from "next/link";
 
 const categories = [
   "burgers",
   "pizzas",
   "bbqs",
-  "Breads",
-  "Porks",
+  "breads",
+  "porks",
   "sandwiches",
   "sausages",
+  "chocolates",
 ]; // endpoint names
 
 function MealsTab({ category }: { category: string }) {
   const { data: meals, isLoading, error } = useMeals(category);
+  console.log(meals);
 
   if (isLoading)
     return <p className="text-center mt-10">Loading {category}...</p>;
@@ -34,8 +37,9 @@ function MealsTab({ category }: { category: string }) {
     <div className="flex justify-center">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
         {meals.map((item) => (
-          <div
+          <Link
             key={item.id}
+            href={`/menu/${item.id}`}
             className="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
           >
             <Image
@@ -56,7 +60,7 @@ function MealsTab({ category }: { category: string }) {
               <p className="text-gray-500 text-sm">{item.dsc}</p>
               <Button className="w-full mt-2">Add to Cart</Button>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -71,7 +75,10 @@ export default function MenuTabs() {
       </header>
 
       <section className="container mx-auto px-4 min-h-screen">
-        <Tabs defaultValue="burgers" className="flex items-center justify-center flex-col">
+        <Tabs
+          defaultValue="burgers"
+          className="flex items-center justify-center flex-col"
+        >
           <TabsList className="flex justify-center mb-8 flex-wrap gap-2">
             {categories.map((cat) => (
               <TabsTrigger key={cat} value={cat}>

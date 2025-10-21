@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 // Updated interface to match Free Food Menus API
 export interface Meal {
   id: number;
+  slug: string;
   name: string;
   dsc: string;
   price: number;

@@ -25,7 +25,7 @@
     "editor.formatOnSave": true
   },
 
-  "editor.fontFamily": "SF Mono",
+  "editor.fontFamily": "Victor Mono Medium",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.lineHeight": 22,
@@ -54,11 +54,11 @@
     "source.organizeImports": "explicit"
   },
 
-  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontFamily": "Victor Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.scrollback": 10000,
-  "terminal.integrated.enableMultiLinePasteWarning":"never",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
 
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
