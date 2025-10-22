@@ -11,6 +11,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "**.free-food-menus-api-two.vercel.app",
       },
+      {
+        protocol: "https",
+        hostname: "goldbelly.imgix.net",
+      },
     ],
   },
 };
